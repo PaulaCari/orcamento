@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento Mensal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Orçamento Mensal</h1>
+
+        <form id="form-orcamento" method="post">
+            <label for="projeto">Descrição do projeto:</label>
+            <input type="text" id="projeto" name="projeto" required>
+
+            <label for="horas-previstas">Quantidade de horas previstas:</label>
+            <input type="number" id="horas-previstas" name="horas-previstas" required>
+
+            <label for="valor-hora">Valor da hora trabalhada:</label>
+            <input type="number" id="valor-hora" name="valor-hora" required>
+
+            <label for="prazo">Prazo estimado:</label>
+            <input type="text" id="prazo" name="prazo" required>
+
+            <button type="submit">Gerar Orçamento</button>
+        </form>
+
+        <div id="resultado-orcamento" class="hidden">
+            <h2>Orçamento Detalhado</h2>
+            <p>Projeto: <span id="projeto-valor"></span></p>
+            <p>Horas Previstas: <span id="horas-previstas-valor"></span></p>
+            <p>Valor Hora: R$ <span id="valor-hora-valor"></span></p>
+            <p>Prazo Estimado: <span id="prazo-valor"></span></p>
+            <p>Valor Total: R$ <span id="valor-total-valor"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
